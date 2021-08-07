@@ -35,8 +35,10 @@ public class Editor {
 		
 		JMenuBar menuBar=new JMenuBar();
 		JMenu main=new JMenu("Main");
+		JMenu file=new JMenu("File");
 		
 		menuBar.add(main);
+		menuBar.add(file);
 		
 		JMenuItem newFile=new JMenuItem("New");
 		JMenuItem openFile=new JMenuItem("Open");
@@ -44,11 +46,20 @@ public class Editor {
 		JMenuItem about=new JMenuItem("About");
 		JMenuItem exit=new JMenuItem("Exit");
 		
+		
+		JMenuItem save=new JMenuItem("Save");
+		JMenuItem search=new JMenuItem("Search");
+		JMenuItem print=new JMenuItem("Print");
+		
 		main.add(newFile);	
 		main.add(openFile);	
 		main.add(td);	
 		main.add(about);	
 		main.add(exit);	
+		
+		file.add(save);
+		file.add(search);
+		file.add(print);
 		
 		frame.setJMenuBar(menuBar);
 		
