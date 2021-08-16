@@ -17,6 +17,8 @@ public class Editor {
 				Openfile of=new Openfile();
 				f.framSetting();
 				of.openLocalFile();
+				SaveFile sf=new SaveFile();
+				sf.saveFile();
 			
 				
 			};

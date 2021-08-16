@@ -18,7 +18,11 @@ import java.sql.ResultSet;
 
 public class Openfile{
 	
+	public static String filePath;
+	public static String fileType;
+	public static JFileChooser fileChooser;
 	FrameUI f=new FrameUI();
+	
 	
 	public  void openLocalFile() {
 		
@@ -29,19 +33,19 @@ f.openFile.addActionListener(new ActionListener() {
 				// TODO Auto-generated method stub
 				try {
 					//Open local file
-					 JFileChooser fileChooser = new JFileChooser();
+					    fileChooser = new JFileChooser();
 				        fileChooser.setDialogTitle("Choose File");
 				        fileChooser.showOpenDialog(null);
 				        fileChooser.setVisible(true);
 				        fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-				        String filePath = fileChooser.getSelectedFile().getAbsolutePath();
+				        filePath = fileChooser.getSelectedFile().getAbsolutePath();
 				       
 				        FileReader readFile=new FileReader(filePath);
 				        BufferedReader bufferedReader = new BufferedReader(readFile);
 				        String content="";
 				        String allContent="";
 				        
-//				        String fileType=filePath.substring(filePath.lastIndexOf(".")+1);
+                        fileType=filePath.substring(filePath.lastIndexOf(".")+1);
 //				        
 //				        
 //				        if( fileType=="txt"){
