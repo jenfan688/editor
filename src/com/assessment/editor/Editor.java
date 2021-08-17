@@ -3,6 +3,8 @@
 package com.assessment.editor;
 
 import java.awt.EventQueue;
+import java.io.File;
+import java.io.IOException;
 
 
 
@@ -16,11 +18,30 @@ public class Editor {
 				FrameUI f=new FrameUI();
 				Openfile of=new Openfile();
 				f.framSetting();
-				of.openLocalFile();
+				NewFile nFile=new NewFile();
 				SaveFile sf=new SaveFile();
-				sf.saveFile();
+				nFile.newfile();
+				//Save as new file to local
+				sf.saveAsFile();
 			
+				//Open local file
+				of.openLocalFile();
 				
+				
+				//Save opened file
+				sf.saveFile();
+				
+				
+				//Exit
+				
+				Exit etExit=new Exit();
+				etExit.et();
+			
+				//About
+				
+				About about=new About();
+				about.at();
+						
 			};
 			
 		});

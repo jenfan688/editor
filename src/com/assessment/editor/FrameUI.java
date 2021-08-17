@@ -22,6 +22,7 @@ public class  FrameUI {
 	public static JMenuItem about;
 	public static JMenuItem exit;
 	public static JMenuItem save;
+	public static JMenuItem saveas;
 	public static JMenuItem search;
 	public static JMenuItem print;
 	
@@ -84,6 +85,7 @@ public class  FrameUI {
 		
 		
 		save=new JMenuItem("Save");
+		saveas=new JMenuItem("Save As");
 		search=new JMenuItem("Search");
 		print=new JMenuItem("Print");
 		
@@ -94,6 +96,7 @@ public class  FrameUI {
 		main.add(exit);	
 		
 		file.add(save);
+		file.add(saveas);
 		file.add(search);
 		file.add(print);
 		

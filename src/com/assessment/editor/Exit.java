@@ -9,16 +9,15 @@ import javax.swing.JFileChooser;
 
 
 
-public class NewFile {
+public class Exit {
 	FrameUI f=new FrameUI();
-	SaveFile s=new SaveFile();
-	public void newfile() {
-	f.newFile.addActionListener(new ActionListener() {
+	
+	public void et() {
+	f.exit.addActionListener(new ActionListener() {
 		
 		public void actionPerformed(ActionEvent e) {
-			f.save.setEnabled(false);
-			f.textArea.setText(null);
-			s.saveAsFile();
+			f.frame.setVisible(false);
+			f.frame.dispose();
 			
 		}
 	});

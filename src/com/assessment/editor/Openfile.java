@@ -25,7 +25,7 @@ public class Openfile{
 	
 	
 	public  void openLocalFile() {
-		
+			
 f.openFile.addActionListener(new ActionListener() {
 			
 			@Override
@@ -33,6 +33,7 @@ f.openFile.addActionListener(new ActionListener() {
 				// TODO Auto-generated method stub
 				try {
 					//Open local file
+					     f.save.setEnabled(true);
 					    fileChooser = new JFileChooser();
 				        fileChooser.setDialogTitle("Choose File");
 				        fileChooser.showOpenDialog(null);
@@ -46,9 +47,6 @@ f.openFile.addActionListener(new ActionListener() {
 				        String allContent="";
 				        
                         fileType=filePath.substring(filePath.lastIndexOf(".")+1);
-//				        
-//				        
-//				        if( fileType=="txt"){
 				        while((content = bufferedReader.readLine()) != null)
 						{
 							 allContent += content + "\r\n";
@@ -64,8 +62,7 @@ f.openFile.addActionListener(new ActionListener() {
 					
 				}
 				
-				
-			
+
 					
 			}
 		});

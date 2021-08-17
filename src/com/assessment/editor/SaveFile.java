@@ -4,17 +4,19 @@ import java.awt.FileDialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
-import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.plaf.LabelUI;
+import javax.swing.JLabel;
+
+
+
+
+
 
 
 
@@ -29,6 +31,7 @@ public class SaveFile {
 			public  void actionPerformed(ActionEvent e) {
 				 
 				 File file = new File(Openfile.filePath);
+				 
 				
 				if (Openfile.filePath!=null) {
 					 try (FileWriter fw = new FileWriter(file);
@@ -41,10 +44,39 @@ public class SaveFile {
 						}
 
 			}
-				
-				
+		
 		};
 	});
+
+}
+	
+	public  void saveAsFile() {
+		f.saveas.addActionListener(new ActionListener(){
+			public  void actionPerformed(ActionEvent e) {
+                JFrame saveFrame = new JFrame();
+                FileOutputStream fo = null;
+                DataOutputStream ds = null;
+				FileDialog fDialog = new FileDialog(saveFrame, "Save", FileDialog.SAVE);
+		        fDialog.setVisible(true);
+		        String path = fDialog.getDirectory() + fDialog.getFile();
+		        String str=f.textArea.getText()+"\n"; 
+		        
+		        File f = new File(path);
+		        try {
+		               
+			            f.createNewFile();
+			             fo = new FileOutputStream(f);
+			             byte[] b= str.getBytes();
+			            fo.write(b);
+			            fo.close();     
+						
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+			}
+		});
 
 }
 	}
