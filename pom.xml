@@ -6,8 +6,8 @@
   
   <properties>
   <java.version>1.8</java.version>
-  <maven.compiler.source>1.8</maven.compiler.source>
-  <maven.compiler.target>1.8</maven.compiler.target>
+  <maven.compiler.source>1.7</maven.compiler.source>
+  <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
   
    <dependencies>
@@ -36,14 +36,15 @@
       </resource>
     </resources>
     <plugins>
-      <plugin>
+      <!--<plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
-      </plugin>
+      </plugin>  -->
       
       <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
             <configuration>
                 <source>1.8</source>
                 <target>1.8</target>
@@ -54,7 +55,6 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        
         
          <plugin>
           <artifactId>maven-site-plugin</artifactId>
@@ -70,10 +70,10 @@
           <version>3.0.2</version>
         </plugin>
         
-        <plugin>
+       <!-- <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
-        </plugin>
+        </plugin>  -->
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
@@ -99,19 +99,24 @@
 		<version>3.0.0</version>
 		<executions>
                     <execution>
-                        <phase>test</phase>
+                       <!--  <phase>test</phase> -->
                         <goals>
                             <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>com.assessment.editor.Main</mainClass>
-                            <arguments>
-                                <argument>arg0</argument>
-                                <argument>arg1</argument>
-                            </arguments>
-                        </configuration>
+                        </goals> 
                     </execution>
-                </executions>
+          </executions>
+            <configuration>
+                       <executable>java</executable>
+                        <classpathScope>compile</classpathScope>
+                         <includeProjectDependencies>true</includeProjectDependencies>
+                         <includePluginDependencies>true</includePluginDependencies>
+                         <mainClass>com.assessment.editor.Main</mainClass>
+                        <arguments>
+                            <argument>arg0</argument>
+                            <argument>arg1</argument>
+                        </arguments>
+                        <classpathScope>test</classpathScope>
+            </configuration>
             </plugin>
     </plugins>
   </build>
