@@ -85,6 +85,7 @@ public class  FrameUI {
 		
 		
 		save=new JMenuItem("Save");
+        save.setEnabled(false);
 		saveas=new JMenuItem("Save As");
 		search=new JMenuItem("Search");
 		print=new JMenuItem("Print");

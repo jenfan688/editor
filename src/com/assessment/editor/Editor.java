@@ -18,6 +18,7 @@ public class Editor {
 				FrameUI f=new FrameUI();
 				Openfile of=new Openfile();
 				f.framSetting();
+				
 				NewFile nFile=new NewFile();
 				SaveFile sf=new SaveFile();
 				nFile.newfile();
@@ -41,7 +42,12 @@ public class Editor {
 				
 				About about=new About();
 				about.at();
-						
+				
+				
+				//Insert timestamp
+				
+				TimeDate ts=new TimeDate();
+				ts.insertTimeStamp();
 			};
 			
 		});

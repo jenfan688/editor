@@ -31,10 +31,12 @@ public class SaveFile {
 			public  void actionPerformed(ActionEvent e) {
 				 
 				 File file = new File(Openfile.filePath);
-				 
 				
+				  System.out.println(Openfile.filePath);
 				if (Openfile.filePath!=null) {
-					 try (FileWriter fw = new FileWriter(file);
+					f.save.setEnabled(true);
+					 try (
+							 FileWriter fw = new FileWriter(file);
 						       BufferedWriter bw = new BufferedWriter(fw)) {
 						      bw.write(f.textArea.getText());
 						      bw.newLine();
@@ -44,6 +46,7 @@ public class SaveFile {
 						}
 
 			}
+				
 		
 		};
 	});
