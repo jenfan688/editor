@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -24,10 +25,7 @@ public class Openfile{
 	FrameUI f=new FrameUI();
 	
 	
-	public String getExtensionByGuava(String filename) {
-	    return Files.getFileExtension(filename);
-	}
-	
+
 	
 	public  void openLocalFile() {
 		
