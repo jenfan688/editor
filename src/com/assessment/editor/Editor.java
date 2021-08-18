@@ -9,6 +9,8 @@ import java.io.IOException;
 
 
 
+
+
 public class Editor {
 	
 	
@@ -18,6 +20,9 @@ public class Editor {
 				FrameUI f=new FrameUI();
 				Openfile of=new Openfile();
 				f.framSetting();
+				
+				Search s=new Search();
+				s.search();
 				
 				NewFile nFile=new NewFile();
 				SaveFile sf=new SaveFile();
@@ -48,6 +53,11 @@ public class Editor {
 				
 				TimeDate ts=new TimeDate();
 				ts.insertTimeStamp();
+				
+				
+				//Print 
+				Print p=new Print();
+				p.pt();
 			};
 			
 		});

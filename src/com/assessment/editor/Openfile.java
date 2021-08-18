@@ -24,7 +24,14 @@ public class Openfile{
 	FrameUI f=new FrameUI();
 	
 	
+	public String getExtensionByGuava(String filename) {
+	    return Files.getFileExtension(filename);
+	}
+	
+	
 	public  void openLocalFile() {
+		
+		
 			
 f.openFile.addActionListener(new ActionListener() {
 			
@@ -33,7 +40,7 @@ f.openFile.addActionListener(new ActionListener() {
 				// TODO Auto-generated method stub
 				try {
 					//Open local file
-					     f.save.setEnabled(true);
+					    f.save.setEnabled(true);
 					    fileChooser = new JFileChooser();
 				        fileChooser.setDialogTitle("Choose File");
 				        fileChooser.showOpenDialog(null);
@@ -66,6 +73,8 @@ f.openFile.addActionListener(new ActionListener() {
 					
 			}
 		});
+
+
 	}
    
 }

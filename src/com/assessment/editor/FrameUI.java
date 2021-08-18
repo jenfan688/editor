@@ -85,7 +85,7 @@ public class  FrameUI {
 		
 		
 		save=new JMenuItem("Save");
-        save.setEnabled(false);
+        save.setEnabled(false);//initiate to  grey out the save item
 		saveas=new JMenuItem("Save As");
 		search=new JMenuItem("Search");
 		print=new JMenuItem("Print");
