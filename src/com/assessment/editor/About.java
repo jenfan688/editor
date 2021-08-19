@@ -18,6 +18,8 @@ public class About {
 	f.about.addActionListener(new ActionListener() {
 		
 		public void actionPerformed(ActionEvent e) {
+			
+			//The display of  version of the editor
 		
 			ImageIcon icon = new ImageIcon("src/Kitten.jpg");
 			JOptionPane.showMessageDialog(null, 

@@ -56,6 +56,8 @@ public class SaveFile {
 	public  void saveAsFile() {
 		f.saveas.addActionListener(new ActionListener(){
 			public  void actionPerformed(ActionEvent e) {
+				
+				//save as new file and select the director from dialog
                 JFrame saveFrame = new JFrame();
                 FileOutputStream fo = null;
                 DataOutputStream ds = null;

@@ -18,6 +18,8 @@ public class Print {
 	f.print.addActionListener(new ActionListener() {
 		
 		public void actionPerformed(ActionEvent e) {
+			
+			//Print the file and save as PDF file if print is cancelled.
 			  MessageFormat ms = new MessageFormat(f.textArea.getText());
               MessageFormat ms1 = new MessageFormat("Page {0}");
               try {

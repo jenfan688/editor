@@ -16,6 +16,8 @@ public class Exit {
 	f.exit.addActionListener(new ActionListener() {
 		
 		public void actionPerformed(ActionEvent e) {
+			
+			//Shut down the window.
 			f.frame.setVisible(false);
 			f.frame.dispose();
 			

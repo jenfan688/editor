@@ -45,7 +45,7 @@ f.openFile.addActionListener(new ActionListener() {
 				        fileChooser.setVisible(true);
 				        fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 				        filePath = fileChooser.getSelectedFile().getAbsolutePath();
-				       
+				     //Read the file and get the text  
 				        FileReader readFile=new FileReader(filePath);
 				        BufferedReader bufferedReader = new BufferedReader(readFile);
 				        String content="";
@@ -57,6 +57,7 @@ f.openFile.addActionListener(new ActionListener() {
 							 allContent += content + "\r\n";
 						}
 				        
+				        //Show text in JtextArea.
 				         f.textArea.setText(allContent);
 				      
 					     
