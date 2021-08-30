@@ -16,6 +16,8 @@ public class NewFile {
 	f.newFile.addActionListener(new ActionListener() {
 		
 		public void actionPerformed(ActionEvent e) {
+			
+			//Click "New" then the text will be cleared.
 			f.save.setEnabled(false);
 			f.textArea.setText(null);
 			s.saveAsFile();

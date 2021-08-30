@@ -24,6 +24,8 @@ public class Search {
 	f.search.addActionListener(new ActionListener() {
 		
 		public  void actionPerformed(ActionEvent e) {
+			
+			//Show search windon
 			String search=JOptionPane.showInputDialog(null,"Find","Type the words",JOptionPane.INFORMATION_MESSAGE);
 			
 			Highlighter.HighlightPainter highlight = new DefaultHighlighter.DefaultHighlightPainter(Color.yellow);

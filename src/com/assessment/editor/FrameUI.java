@@ -1,17 +1,22 @@
 package com.assessment.editor;
+import java.awt.BorderLayout;
 import java.awt.TextArea;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
+import javax.swing.text.DefaultEditorKit;
 
 public class  FrameUI {
 	
    
 	public static JFrame frame;
+	public static JPanel panel;
 	public static JTextArea textArea;
 	public static JMenuBar menuBar;
 	public static JMenu main;
@@ -26,28 +31,7 @@ public class  FrameUI {
 	public static JMenuItem search;
 	public static JMenuItem print;
 	
-//	public static void framSetting(){
-//		frame = new JFrame();
-//		frame.setBounds(350,350,850, 650);
-//		frame.setTitle("Edit your world");
-//		frame.setLocationRelativeTo(null);
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.getContentPane().setLayout(null);
-//		frame.setVisible(true);
-//		
-//		textArea = new JTextArea();
-//		textArea.setBounds(0, 00, 850, 650);
-//		textArea.setLineWrap(true);
-//		frame.add(textArea);
-//		
-//		menuBar=new JMenuBar();
-//		main=new JMenu("Main");
-//		file=new JMenu("File");
-//		
-//		menuBar.add(main);
-//		menuBar.add(file);
-//		
-//	}
+
 	
 	public void framSetting(){
 		//Create main frame
@@ -60,9 +44,11 @@ public class  FrameUI {
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
 		
+		
+		
 		//Add text field
 		textArea = new JTextArea();
-		textArea.setBounds(0, 00, 850, 650);
+		textArea.setBounds(0, 00, 1550, 850);
 		textArea.setLineWrap(true);
 		textArea.setWrapStyleWord(true);     
 		frame.add(textArea);
@@ -89,6 +75,19 @@ public class  FrameUI {
 		saveas=new JMenuItem("Save As");
 		search=new JMenuItem("Search");
 		print=new JMenuItem("Print");
+		
+		
+		//Copy,paste,cut 
+		
+		  JMenuItem copy = new JMenuItem( new DefaultEditorKit.CopyAction() );
+	         copy.setText("Copy");
+	            file.add(copy);
+	        JMenuItem paste = new JMenuItem( new DefaultEditorKit.PasteAction() );
+	         paste.setText("Paste");
+	            file.add(paste);
+	        JMenuItem cut = new JMenuItem( new DefaultEditorKit.CutAction() );
+	         cut.setText("Cut");
+	            file.add(cut);
 		
 		main.add(newFile);	
 		main.add(openFile);	
